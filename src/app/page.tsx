@@ -1,5 +1,11 @@
 import Image from 'next/image'
 import Navbar from './navbar'
+import { Pixelify_Sans } from 'next/font/google'
+
+const pixelifySans = Pixelify_Sans({
+  weight: '700',
+  subsets: ['cyrillic'],
+})
 
 export default function Home() {
   return (
@@ -18,8 +24,10 @@ export default function Home() {
             />
           </div>
 
-          <div className="text-center">
-            <h1 className="text-2xl font-bold">Sow the $SEEDS, mint the crop, & reap the $YIELD</h1>
+          <div className="text-center text-2xl font-bold">
+            <h1 className={pixelifySans.className}>
+              Sow the $SEEDS, mint the crop, & reap the $YIELD
+            </h1>          
           </div>
         </div>
 
